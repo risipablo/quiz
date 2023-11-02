@@ -87,7 +87,7 @@ const questions = [
     },
     {
         question: "¿Quien esta obsecionado con masajes tranticos?",
-        Image:"./masajes.jpg"
+        Image:"./masajes.jpg",
         answers: [
             { text: "La Comitiva", correct: false},
             { text: "Falopita Jackson", correct: false},
@@ -167,6 +167,14 @@ const questions = [
             { text: "No perro, el kiki se la c*gio, yo no", correct: false},
             { text: "Tenia un sable", correct: false},
             { text: "Le colgaban los huevos", correct: true},
+        ] 
+    },
+    {
+        question: "Tu mujer te romper las bolas ¿Que haces?",
+        answers: [
+            { text: "Pido el divorcio", correct: false},
+            { text: "Me voy de la casa y que se vaya todo a la mierda", correct: false},
+            { text: "Me pongo en MODO GATO", correct: true},
         ] 
     },
     {
