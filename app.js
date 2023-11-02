@@ -187,15 +187,6 @@ const questions = [
         ] 
     },
     {
-        question: "¿Quien esta obsecionado con masajes tranticos?",
-        Image:"./masajes.jpg",
-        answers: [
-            { text: "La Comitiva", correct: false},
-            { text: "Falopita Jackson", correct: false},
-            { text: "El Mancini", correct: true},
-        ] 
-    },
-    {
         question: "Un manija tiene un cuchillo y te amenaza",
         answers: [
             { text: "Le meto un biandazo y una patada en el orto.", correct: true},
@@ -300,11 +291,11 @@ function showScore(){
     resetState();
     let message = "";
     let imagesrc = "";
-    if (score >= 14){
+    if (score >= 18){
         message = "Felicidades, sos terrible manija. Deberias empezar una vida nueva"
         imagesrc = "./win.jpeg"
     
-    } else if (score >= 8){
+    } else if (score >= 12){
         message = "Sos medio manija pero podes adaptarte a la sociedad"
         imagesrc = "./casi2.jpg"
     } else {
