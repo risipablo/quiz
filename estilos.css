@@ -1,0 +1,195 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(233, 211, 12);
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.welcome{
+    background-color: aliceblue;
+    width: 90%;
+    margin: 40px auto 0;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.welcome p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 4px 0;
+    margin: 8px 2px;
+}
+
+footer{
+    background-color: #313131;
+    flex-shrink: 0;
+    color: #fff;
+    margin: 20px 0px 0px;
+}
+
+footer p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0px 20px;
+    padding: 9px 8px;
+
+}
+
+.logo{
+    display: flex;
+    padding: 0px 30px;
+    margin: 20px auto 0;
+    
+}
+
+.logo img{
+    height: 100px;
+    width: 100px;
+    padding: 2px 8px;
+    transform: rotate(15deg);
+    animation: rotate360 4s linear infinite;
+    
+}
+
+
+.medio img{
+    height: 140px;
+    width: 120px;
+    padding: 2px 2px;
+    animation: moveLeftToRight 3s linear infinite;
+}
+
+@keyframes moveLeftToRight {
+
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100vw); /* Usar 100vw para mover la imagen a lo ancho de la pantalla */
+    }
+}
+
+.medio.move-right img {
+    transform: translateX(100%); /* Mueve la imagen a la derecha (100%) */
+}
+
+.app{
+    background-color: aliceblue;
+    width: 90%;
+    margin: 60px auto 60px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+
+.container h1{
+    text-align: center;
+    margin: 25px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: rgba(240, 10, 10, 0.904);
+
+}
+
+
+.app h2{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 22px;
+    border-bottom: 1px solid black;
+    padding-bottom: 32px;
+}
+
+.quiz{
+    padding: 20px 0px;
+}
+
+.btn{
+    background-color: rgba(25, 49, 158, 0.836);
+    color: #dfdada;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #222222;
+    border-radius: 20px;
+    margin: 22px 0px;
+    padding: 9px 12px;
+    cursor: pointer;
+}
+
+.btn:hover:not([disabled]){
+    transition: .7s;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+.next-question{
+    align-items: center;
+    display: none;
+    color: #fff;
+    background-color: crimson;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 30px auto 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.next-question:hover{
+    background-color: rgb(12, 12, 12);
+    transition: .7s;
+}
+
+.back-question{
+    align-items: center;
+    display: none;
+    color: #fff;
+    background-color: crimson;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 30px auto 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.correct{
+    background-color: rgb(19, 155, 19);
+}
+
+.incorrect{
+    background-color: rgb(219, 9, 9);
+}
+
+/* Imagen */
+.question-image{
+    max-width: 100%;
+    margin: 10px 0px;
+}
+
+.score-image{
+    max-width: 100%;
+    padding: 10px 0px;
+}
