@@ -6,7 +6,15 @@ const questions = [
         answers: [
             { text: "Nooooseeeeep", correct: true},
             { text: "Fue mi error y me arrepiento", correct: false},
-            { text: "Estaba endemoniado", correct: false},
+            { text: "Peeerrrdon polka &#128557", correct: false},
+        ] 
+    },
+    {
+        question: "Hay un operativo en la casa de tu transa. ¿Que haces?",
+        answers: [
+            { text: "Sigo de largo", correct: false},
+            { text: "Me voy y vengo otro dia", correct: false},
+            { text: "¿Hay fasito?", correct: true},
         ] 
     },
     {
@@ -36,6 +44,7 @@ const questions = [
     },
     {
         question: "¿Por que se separo Muzzeta Band ?",
+        image:"./logopng.png",
         answers: [
             { text: "Problemas de drogas y alcohol", correct: false},
             { text: "Internacion del cantante", correct: true},
@@ -99,7 +108,7 @@ const questions = [
         answers: [
             { text: "¿que hace usted aca?", correct: true},
             { text: "Ionoro", correct: false},
-            { text: "CHooorrooo", correct: false},
+            { text: "Chooorrooo", correct: false},
         ] 
     },
     {
@@ -116,7 +125,7 @@ const questions = [
         answers: [
             { text: "Una expresion de felicidad", correct: false},
             { text: "Un aviso de A.C.V", correct: false},
-            { text: "Un hombre totalmente drogado", correct: true},
+            { text: "La unica neurona funcionando", correct: true},
         ] 
     },
     {
@@ -124,8 +133,8 @@ const questions = [
         image:"./imagen3.jpg",
         answers: [
             { text: "Dos cuidadanos de Israel despues del bombardeo", correct: false},
-            { text: "Dos sujetos en narnia", correct: true},
-            { text: "Dos albaniles recien cobrados", correct: false},
+            { text: "Dos sujetos pasados de falopa", correct: false},
+            { text: "Dos albaniles recien cobrados", correct: true},
         ] 
     },
     {
@@ -146,6 +155,14 @@ const questions = [
         ] 
     },
     {
+        question: "¿Que gusto de helado era el más vendido en grido?",
+        answers: [
+            { text: "Chocolate", correct: false},
+            { text: "Vainilla", correct: false},
+            { text: "Crema del repartidor (crema del cielo)", correct: true},
+        ] 
+    },
+    {
         question: "Te invitas a un asado al lado de tu casa. ¿como te volves?",
         answers: [
             { text: "En silla de ruedas", correct: true},
@@ -154,18 +171,27 @@ const questions = [
         ] 
     },
     {
+        question: "¿Quien esta obsecionado con masajes tranticos?",
+        Image:"./masajes.jpg",
+        answers: [
+            { text: "La Comitiva", correct: false},
+            { text: "Falopita Jackson", correct: false},
+            { text: "El Mancini", correct: true},
+        ] 
+    },
+    {
         question: "Un manija tiene un cuchillo y te amenaza",
         answers: [
+            { text: "Le meto un biandazo y una patada en el orto.", correct: true},
             { text: "Lo ignoro, me subo al auto y me voy", correct: false},
             { text: "Le tiro besos y me voy", correct: false},
-            { text: "Le meto un biandazo y una patada en el orto.", correct: true},
         ] 
     },
     {
         question: "Cuando le fue agarrar la sosha",
         answers: [
             { text: "No perro, el kiki se la c*gio, yo no", correct: false},
-            { text: "Tenia un sable", correct: false},
+            { text: "vos vas a hacer", correct: false},
             { text: "Le colgaban los huevos", correct: true},
         ] 
     },
@@ -315,7 +341,7 @@ startButton.addEventListener("click", () =>{
 
 
 notReadyButton.addEventListener("click", () => {
-    welcomeDiv.innerHTML = "Ayyyyyyy aammmmmmmm, es que me da miedito mmmmmmmmhhhhhh";
+    welcomeDiv.innerHTML = "Ayyyy es que el turco me trata mal. Aprete en INICIO para volver a jugar, chupa pija";
     const notReadyContent = document.getElementById("notReadyContent");
     notReadyContent.style.display = "block";
 });
@@ -327,4 +353,33 @@ const medio = document.querySelector(".medio");
 
 medio.addEventListener("click", function () {
     medio.classList.toggle("move-right");
-});s
+});
+
+// modo oscuro
+const BtnOscuro = document.querySelectorAll("#oscuro");
+const modoLocalStorageKey = "modoOscuro";
+
+
+function cambiarModo() {
+    document.body.classList.toggle('dark');
+    BtnOscuro.forEach(btn => {
+        btn.classList.toggle('active');
+    });
+
+    // variable para guardar en el localstorage
+    const modoActual = document.body.classList.contains('dark') ? 'oscuro' : 'claro';
+    localStorage.setItem(modoLocalStorageKey, modoActual);
+}
+
+// Modo oscuro desde el Local Storage al cargar la página
+const modoGuardado = localStorage.getItem(modoLocalStorageKey);
+if (modoGuardado === 'oscuro') {
+    document.body.classList.add('dark');
+    BtnOscuro.forEach(btn => {
+        btn.classList.add('active');
+    });
+}
+
+BtnOscuro.forEach(btn => {
+    btn.addEventListener('click', cambiarModo);
+});
