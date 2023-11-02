@@ -2,15 +2,6 @@
 
 const questions = [
     {
-        question: "¿Cuantas minas se cogio?",
-        image: "./xe (1).jpeg",
-        answers: [
-            { text: "Más de 500", correct: true},
-            { text: "Más de 100", correct: false},
-            { text: "No garcha se mata a superpajas", correct: false},
-        ] 
-    },
-    {
         question: "¿Quien es este personaje?",
         image:"./dan.jpg",
         answers: [
@@ -94,7 +85,15 @@ const questions = [
             { text: "Me bajo con la cara llena de sangre y me pongo a laburar", correct: true},
         ] 
     },
-
+    {
+        question: "¿Cuantas minas se c*gio el Valde?",
+        image: "./xe (1).jpeg",
+        answers: [
+            { text: "Más de 500", correct: true},
+            { text: "Más de 100", correct: false},
+            { text: "No garcha se mata a superpajas", correct: false},
+        ] 
+    },
     {
         question: "Cuuuuuando va ir a ....",
         answers: [
