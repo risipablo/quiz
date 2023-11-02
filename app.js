@@ -15,7 +15,7 @@ const questions = [
         answers: [
             { text: "Nooooseeeeep", correct: true},
             { text: "Fue mi error y me arrepiento", correct: false},
-            { text: "Peeerrrdon polka &#128557", correct: false},
+            { text: "Peeerrrdon polka &#128557", correct: true},
         ] 
     },
     {
@@ -23,7 +23,7 @@ const questions = [
         answers: [
             { text: "Sigo de largo", correct: false},
             { text: "Me voy y vengo otro dia", correct: false},
-            { text: "¿Hay fasito?", correct: true},
+            { text: "¿Hay fasito je je?", correct: true},
         ] 
     },
     {
@@ -120,11 +120,11 @@ const questions = [
         ] 
     },
     {
-        question: "¿Que dijo la teresa cuando entraron a su casa?",
+        question: "No tenes trajeta de crecito ¿que haces?",
         answers: [
-            { text: "¿que hace usted aca?", correct: true},
-            { text: "Ionoro", correct: false},
-            { text: "Chooorrooo", correct: false},
+            { text: "Banco JB", correct: true},
+            { text: "Vo deci?", correct: false},
+            { text: "io noro", correct: false},
         ] 
     },
     {
