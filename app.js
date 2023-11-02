@@ -2,6 +2,15 @@
 
 const questions = [
     {
+        question: "¿Quien es este personaje?",
+        image:"./dan.jpg",
+        answers: [
+            { text: "Freddi Mercury si hubiera probado el chori de vaca y no de humano", correct: false},
+            { text: "Dan Severn", correct: false},
+            { text: "El Gusti", correct: true},
+        ] 
+    },
+    {
         question: "¿ Que responder cuando rompiste un parabrisas ?",
         answers: [
             { text: "Nooooseeeeep", correct: true},
@@ -87,11 +96,10 @@ const questions = [
     },
     {
         question: "Cuuuuuando va ir a ....",
-        Image:"./suj.jpeg",
         answers: [
-            { text: "Trabajar", correct: false},
-            { text: "Laburar", correct: true},
-            { text: "Entrenar", correct: false},
+            { text: "Trabajar,vago", correct: false},
+            { text: "Laburar,vago", correct: true},
+            { text: "hacer algo de su vida hombre", correct: true},
         ] 
     },
     {
@@ -101,6 +109,14 @@ const questions = [
             { text: "La Comitiva", correct: false},
             { text: "Falopita Jackson", correct: false},
             { text: "El Mancini", correct: true},
+        ] 
+    },
+    {
+        question: "Tu amigo se clava un hongo. ¿Que haces?",
+        answers: [
+            { text: "Le rompo las bolas para conseguir más y le bajo la locura", correct: true},
+            { text: "Sigo en la mia", correct: false},
+            { text: "Me hago el ofendidito", correct: true},
         ] 
     },
     {
@@ -195,6 +211,7 @@ const questions = [
             { text: "Le colgaban los huevos", correct: true},
         ] 
     },
+
     {
         question: "Tu mujer te romper las bolas ¿Que haces?",
         answers: [
@@ -284,7 +301,7 @@ function showScore(){
     let message = "";
     let imagesrc = "";
     if (score >= 14){
-        message = "Felicidades, sos terrible manija. Deberias buscar otro grupo"
+        message = "Felicidades, sos terrible manija. Deberias empezar una vida nueva"
         imagesrc = "./win.jpeg"
     
     } else if (score >= 8){
@@ -358,6 +375,7 @@ medio.addEventListener("click", function () {
 // modo oscuro
 const BtnOscuro = document.querySelectorAll("#oscuro");
 const modoLocalStorageKey = "modoOscuro";
+
 
 
 function cambiarModo() {

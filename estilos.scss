@@ -28,7 +28,7 @@ body{
 
 .inicio{
     display: flex;
-    padding: 2px 9px;
+    padding: 12px 9px;
     justify-content:space-between;
     position:sticky;
     z-index: 99;
@@ -93,13 +93,13 @@ footer{
         li {
             padding: 12px 8px;
             a{
-                font-size: 14px;
+                font-size: 16px;
                 color: #fff;
             }
         }
         i{
             color: #fff;
-            font-size: 16px;
+            font-size: 18px;
             padding: 0 8px;
         }
     }
@@ -107,19 +107,63 @@ footer{
 
 .logo{
     display: flex;
-    padding: 0px 30px;
-    margin: 30px auto ;
+    padding: 0px 20px;
+    margin: 22px auto ;
     
 }
 
-.logo img{
+.logo img:nth-child(1) {
     height: 100px;
-    width: 100px;
+    width: 90px;
     padding: 2px 8px;
     transform: rotate(15deg);
-    animation: rotate360 4s linear infinite;
-    
+    animation: rotate360-1 4s linear infinite; 
 }
+
+@keyframes rotate360-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo img:nth-child(2) {
+    height: 100px;
+    width: 90px;
+    padding: 2px 8px;
+    transform: rotate(15deg);
+    animation: rotate360-2 4s linear infinite; /* 4s controla la velocidad de la animación */
+}
+
+@keyframes rotate360-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+.logo img:nth-child(3) {
+    height: 100px;
+    width: 90px;
+    padding: 2px 8px;
+    transform: rotate(15deg);
+    animation: rotate360-3 4s linear infinite; /* 4s controla la velocidad de la animación */
+}
+
+@keyframes rotate360-3 {
+    0% {
+        transform: rotate(300deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 
 
 .medio img{
@@ -136,7 +180,7 @@ footer{
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(0%);
+        transform: translateX(100%);
     }
 
     100% {
@@ -241,6 +285,7 @@ footer{
 /* Imagen */
 .question-image{
     max-width: 100%;
+    max-height: 300px;
     margin: 10px 0px;
 }
 
@@ -303,7 +348,6 @@ footer{
     }
 }
 
-.score{
-    color: red;
-    font-weight: 700;
+.oculto {
+    display: none;
 }
