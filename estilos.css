@@ -266,8 +266,9 @@ body.dark footer {
 /* Imagen */
 .question-image {
   max-width: 100%;
-  max-height: 250px;
-  margin: 10px 0px;
+  display: block;
+  max-height: 200px;
+  margin: 10px auto;
 }
 
 .score-image {
